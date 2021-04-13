@@ -1,0 +1,59 @@
+@import "./bootstrap_custom.scss";
+body {
+  background-color: rgb(202, 202, 243);
+  color: rgb(32, 1, 68);
+}
+h1,
+h2,
+h3,
+h4,
+h5 {
+  text-align: center;
+}
+nav {
+  background-color: rgb(165, 157, 241);
+}
+.card {
+  background-color: rgb(227, 225, 248);
+}
+.task-body {
+  display: flex;
+  flex-direction: column;
+}
+.task {
+  margin-bottom: 1em;
+  text-align: center;
+  .action {
+    opacity: 0;
+  }
+  &:hover .action {
+    opacity: 1;
+    transition: opacity 0.5s ease;
+  }
+}
+a {
+  color: rgb(32, 1, 68);
+}
+a:hover {
+  color: rgb(114, 58, 179);
+  text-decoration: none;
+}
+.completed {
+  text-decoration: line-through;
+}
+.btn-primary {
+  background-color: rgb(32, 1, 68);
+  border-color: rgb(32, 1, 68);
+}
+.btn-primary:hover,
+.btn-primary:active {
+  background-color: rgb(114, 58, 179);
+  border-color: rgb(114, 58, 179);
+}
+.btn-primary:focus {
+  box-shadow: rgb(114, 58, 179);
+}
+.space-between {
+  display: flex;
+  justify-content: space-between;
+}
