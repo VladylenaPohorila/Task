@@ -5,8 +5,8 @@ class TasksController < ApplicationController
   # GET /tasks or /tasks.json
   def index
     if user_signed_in?
-      @tasks = Task.where(completed: false)
-      @completed_tasks = Task.where(completed: true)
+      @tasks = Task.where(:user_id => current_user.id, completed: false)
+      @completed_tasks = Task.where(:user_id => current_user.id, completed: true)
     end
   end
 
